@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer="script.js"></script>
+  </head>
+  <body class="banner">
+    <div class="banner-center">
+      <div class="center my">
+        <img src="img/quiz-logo.png" alt="quiz-logo" />
+      </div>
+      <div class="center my">
+        <div class="center my py">
+          <button id="startquiz" class="btn">CLICK HERE</button>
+        </div>
+        <div class="my py">
+          <h1 class="glow center">TO START THE QUIZ</h1>
+        </div>
+      </div>
+    </div>
+    <!-- sign in form  -->
+    <div id="login" class="banner-center hide">
+      <div class="form">
+        <form action="#">
+          <h1> Sign In</h1>
+          <label> Username</label>
+          <input type="text" id="username" name="username" />
+          <label> Password</label>
+          <input type="password" id="password" name="password" />
+          
+        <div class="submit my">
+          <input id="loginBtn" type="submit" value="Log In" >
+        </div>
+        <div>
+          <button id="registration" class="submit px py"> Sign Up</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- signup form -->
+    <div id="signup" class="banner-center hide">
+      <div class="form">
+        <form action="#">
+          <h1> Registration Form</h1>
+          <label> First Name</label>
+          <input type="text" id="firstname" name="firstname" />
+          <label> Last Name</label>
+          <input type="text" id="lastname" name="lastname" />
+          <label> Contact Number </label>
+          <input type="text" id="conatct" name="conatct" />
+          <label> Email ID </label>
+          <input type="text" id="email" name="email" />
+          <label> Country </label>
+          <select id="country" name="country" />
+          <option value="India">India</option>
+          <option value="Australia">Australia</option>
+          <option value="USA">USA</option>
+          <option value="Russia">Russia</option>
+        </select>
+        <div class="submit my">
+          <input id="registrationDone" type="submit" value="Submit" >
+        </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

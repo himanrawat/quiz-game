@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+
+:root {
+  --wrong: #ff2da6;
+  --correct: #00fdfb;
+  --global: #330376;
+  --quiz: #f8f0fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(img/background.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: "Merienda", cursive;
+}
+
+.py {
+  padding: 10px 0;
+}
+
+.px {
+  padding: 0 10px;
+}
+
+.my {
+  margin: 10px 0px;
+}
+
+.mx {
+  margin: 0px 10px;
+}
+.banner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  text-align: center;
+}
+
+.glow {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--wrong),
+      0 0 40px var(--wrong), 0 0 50px var(--wrong), 0 0 60px var(--wrong),
+      0 0 70px var(--wrong);
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00fdfb, 0 0 40px #00fdfb,
+      0 0 50px #00fdfb, 0 0 60px #00fdfb, 0 0 70px #00fdfb, 0 0 80px #00fdfb;
+  }
+}
+
+@keyframes box-glow {
+  from {
+    box-shadow: inset 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--wrong),
+      0 0 40px var(--wrong), 0 0 50px var(--wrong), 0 0 60px var(--wrong),
+      0 0 70px var(--wrong);
+  }
+  to {
+    box-shadow: inset 0 0 20px #fff, 0 0 30px #00fdfb, 0 0 40px #00fdfb,
+      0 0 50px #00fdfb, 0 0 60px #00fdfb, 0 0 70px #00fdfb, 0 0 80px #00fdfb;
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-family: "Pacifico", cursive;
+}
+
+.btn:focus {
+  border: none;
+}
+
+.btn:hover {
+  animation: box-glow 1s ease-in-out infinite alternate;
+}
+
+.form {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: #0d0f40;
+  padding: 0px 80px;
+  box-shadow: 0 0 10px var(--global), 0 0 20px var(--global),
+    0 0 30px var(--global), 0 0 40px var(--global), 0 0 50px var(--global),
+    0 0 60px var(--global), 0 0 70px var(--global);
+  border-radius: 15px;
+}
+
+form h1 {
+  color: #fff;
+  font-weight: bolder;
+  margin: 30px;
+  text-decoration: underline solid var(--wrong);
+}
+
+label {
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+input,
+select,
+button {
+  font-size: 20px;
+  padding: 5px;
+  font-family: "Merienda", cursive;
+}
+
+label,
+input,
+select {
+  display: block;
+  width: 100%;
+}
+
+.submit {
+  margin: 30px 0 30px 0;
+}
+
+.submit input,
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+/* ================ START QUIZ ============================ */
+/* 
+.polygon {
+  padding: 20px;
+  background-color: #fff;
+  width: 80rem;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+} */
+
+.quiz {
+  width: 50vw;
+  color: var(--quiz);
+  text-align: center;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.answer button {
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #0d0f40;
+  color: #fff;
+  border: none;
+}
+
+.answer button:focus {
+  border-color: none;
+}
+
+.answer button:hover {
+  animation: box-glow 1s ease-in-out infinite alternate;
+}
+
+.wrong-answer {
+  background-color: var(--wrong) !important;
+  color: var(--global) !important;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--wrong),
+    0 0 40px var(--wrong), 0 0 50px var(--wrong), 0 0 60px var(--wrong),
+    0 0 70px var(--wrong);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.correct-answer {
+  background-color: var(--correct) !important;
+  color: var(--global) !important;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--correct),
+    0 0 40px var(--correct), 0 0 50px var(--correct), 0 0 60px var(--correct),
+    0 0 70px var(--correct);
+  border-radius: 20px;
+}
+
+.logo {
+  height: 200px;
+  text-align: center;
+}
+
+.logo img {
+  max-height: 100%;
+}
